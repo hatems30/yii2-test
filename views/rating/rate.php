@@ -56,7 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
             $('#channelwinddeductible-wind_deductible_buy_back_limit').on('keyup',function(){
                 wind_deductible_buy_back_limit = parseFloat($('#channelwinddeductible-wind_deductible_buy_back_limit').val());
 
-                if(wind_deductible_buy_back_limit > 80000){
+                if(wind_deductible_buy_back_limit > <?php echo $config['value'] ?>){
                    Deductible = wind_deductible_buy_back_limit*0.07;
                 }else{
                      Deductible = wind_deductible_buy_back_limit*0.05;
