@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Channel Wind Deductible', ['Rate'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Rate Channel Wind Deductible', ['rate'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

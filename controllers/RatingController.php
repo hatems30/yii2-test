@@ -36,17 +36,18 @@ class RatingController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionRate()
-    {
+    public function actionRate() {
         $model = new ChannelWindDeductible();
-        $config=\app\models\Config::findOne(array("key"=>'deductible_variable_value'));
-            
-     
-        return $this->render('rate', [
-                'model' => $model,
-                'config' =>$config
+        $config = \app\models\Config::findOne(array("key" => 'deductible_variable_value'));
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['index', 'id' => $model->id]);
+        } else {
+            return $this->render('rate', [
+                        'model' => $model,
+                        'config' => $config
             ]);
-       
+        }
     }
 
     /**

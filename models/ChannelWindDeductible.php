@@ -45,9 +45,9 @@ class ChannelWindDeductible extends \yii\db\ActiveRecord
             'id' => 'ID',
             'wind_deductible_buy_back_limit' => 'Wind Deductible Buy Back Limit',
             'deductible' => 'Deductible',
-            'base_rate' => 'Base Rate',
-            'credit_modification' => 'Credit Modification',
-            'debit_modification' => 'Debit Modification',
+            'base_rate' => 'Base Rate %',
+            'credit_modification' => 'Credit Modification %',
+            'debit_modification' => 'Debit Modification %',
             'premium_price' => 'Premium Price',
 
         ];
